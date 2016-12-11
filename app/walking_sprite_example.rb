@@ -28,8 +28,14 @@ class WalkingSpriteExample < MG::Scene
     add @hero
 
     on_touch_begin do |event|
-      @hero.flipped_horizontally = moved_left?(event.location)
-      @hero.move_to(event.location, 1)
+      new_location = event.location
+      distance = Math.sqrt( # Pythagorean theorem
+        ((@hero.position.x - new_location.x).abs ** 2) +
+        ((@hero.position.y - new_location.y).abs ** 2)
+      )
+      speed = distance / 150 # move at a rate of 150 points per second
+      @hero.flipped_horizontally = moved_left?(new_location)
+      @hero.move_to(event.location, speed)
     end
   end
 
