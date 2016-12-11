@@ -10,3 +10,4 @@ end
 # Use `rake -T' to see the list of all tasks.
 # For iOS specific settings, refer to config/ios.rb.
 # For Android specific settings, refer to config/android.rb.
+task :default => 'ios:simulator'

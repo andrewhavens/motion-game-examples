@@ -1,15 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    motion-game (1.1.4)
+    motion-game (1.1.6)
     rake (11.1.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  motion-game
+  motion-game (~> 1.1.6)
   rake
 
 BUNDLED WITH
-   1.11.2
+   1.13.6
