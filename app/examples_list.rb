@@ -12,7 +12,7 @@ class ExamplesList < MG::Scene
     button.font_size = 60
     button.anchor_point = [0.5, 1] # center, top
     button.position = [@director.size.width / 2, @director.size.height - 20 - (@options_count*70)]
-    button.on_touch {|type| @director.replace(scene_class.new) if type == :end }
+    button.on_touch {|type| @director.push(scene_class.new) if type == :end }
     add(button)
     @options_count += 1
   end
