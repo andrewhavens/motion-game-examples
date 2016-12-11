@@ -12,7 +12,7 @@ class ColorDotsExample < MG::Scene
     button.font_size = 48
     button.anchor_point = [0, 1] # left, top
     button.position = [0, director.size.height] # left, top
-    button.on_touch {|type| director.replace(ExamplesList.new) if type == :end }
+    button.on_touch {|type| director.pop if type == :end }
     add(button)
   end
 
