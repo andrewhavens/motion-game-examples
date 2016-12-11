@@ -28,8 +28,12 @@ class WalkingSpriteExample < MG::Scene
     add @hero
 
     on_touch_begin do |event|
+      @hero.flipped_horizontally = moved_left?(event.location)
       @hero.move_to(event.location, 1)
     end
   end
 
+  def moved_left?(new_location)
+    new_location.x < @hero.position.x
+  end
 end
