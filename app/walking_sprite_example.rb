@@ -36,7 +36,7 @@ class WalkingSpriteExample < MG::Scene
       @hero.flipped_horizontally = moved_left?(new_location)
       @hero.move_to(event.location, speed)
       frames = [1, 2, 3, 4, 3, 2].map {|i| "hero_walk#{i}.png"}
-      @hero.animate(frames, 0.15, :forever)
+      @hero.animate(frames, 0.15, MG::Repeat::FOREVER)
       # FIXME: use a Sequence instead of a DelayTime action
       @hero.run_action(MG::DelayTime.new(speed)) do
         @hero.stop_all_actions # stop walking animation
