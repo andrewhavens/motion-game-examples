@@ -28,19 +28,16 @@ class WalkingSpriteExample < MG::Scene
     on_touch_begin do |event|
       @hero.stop_all_actions # cancel any moves in progress since our destination has changed
       new_location = event.location
-      distance = Math.sqrt( # Pythagorean theorem
-        ((@hero.position.x - new_location.x).abs ** 2) +
-        ((@hero.position.y - new_location.y).abs ** 2)
-      )
+      distance = @hero.position.distance(new_location)
       speed = distance / 150 # move at a rate of 150 points per second
       @hero.flipped_horizontally = moved_left?(new_location)
       @hero.move_to(event.location, speed)
       frames = [1, 2, 3, 4, 3, 2].map {|i| "hero_walk#{i}.png"}
-      @hero.animate(frames, 0.15, :forever)
+      @hero.animate(frames, 0.15, MG::Repeat::FOREVER)
       # FIXME: use a Sequence instead of a DelayTime action
       @hero.run_action(MG::DelayTime.new(speed)) do
         @hero.stop_all_actions # stop walking animation
-        @hero.animate(["hero.png"], 1, :forever)
+        @hero.animate(["hero.png"], 1, MG::Repeat::FOREVER)
       end
     end
   end
