@@ -1,2 +1,5 @@
 .repl_history
 build
+
+# RubyMine
+.idea
