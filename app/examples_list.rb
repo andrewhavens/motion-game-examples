@@ -2,6 +2,7 @@ class ExamplesList < MG::Scene
   def initialize
     add_option "Color Dots", ColorDotsExample
     add_option "Walking Sprite", WalkingSpriteExample
+    add_option "Color Dots Advance", ColorDotsAdvanceExample
   end
 
   def add_option(label_text, scene_class)
