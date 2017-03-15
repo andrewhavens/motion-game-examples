@@ -5,7 +5,7 @@ class ColorDotsAdvanceExample < MG::Scene
 
     @director ||= MG::Director.shared
 
-    add_back_button
+    add(BackButton.create)
     add_description_label
     add_score_label
 
@@ -13,16 +13,6 @@ class ColorDotsAdvanceExample < MG::Scene
 
     @dots = []
     @schedule_key = schedule(0, MG::Repeat::FOREVER, 1.25) { |delta| game_loop }
-  end
-
-  def add_back_button
-    button = MG::Button.new("< Back")
-    button.font = "Arial"
-    button.font_size = 48
-    button.anchor_point = [0, 1] # left, top
-    button.position = [0, @director.size.height] # left, top
-    button.on_touch { |type| @director.pop if type == :end }
-    add(button)
   end
 
   def game_loop
