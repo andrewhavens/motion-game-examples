@@ -4,6 +4,7 @@ class ExamplesList < MG::Scene
     add_option "Color Dots Advanced", ColorDotsAdvanceExample
     add_option "Walking Sprite", WalkingSpriteExample
     add_option "Basic Collision Detection", BasicCollisionExample
+    add_option "Advanced Collision Detection", AdvancedCollisionExample
   end
 
   def add_option(label_text, scene_class)
