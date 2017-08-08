@@ -2,6 +2,7 @@ class ExamplesList < MG::Scene
   def initialize
     add_option "Color Dots", ColorDotsExample
     add_option "Color Dots Advanced", ColorDotsAdvanceExample
+    add_option "Animated Sprite", AnimatedSpriteExample
     add_option "Walking Sprite", WalkingSpriteExample
     add_option "Basic Collision Detection", BasicCollisionExample
     add_option "Advanced Collision Detection", AdvancedCollisionExample
