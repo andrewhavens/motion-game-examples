@@ -1,14 +1,18 @@
+PATH
+  remote: ../motion-game
+  specs:
+    motion-game (1.1.14)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    motion-game (1.1.14)
     rake (12.0.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  motion-game (~> 1.1.14)
+  motion-game!
   rake
 
 BUNDLED WITH

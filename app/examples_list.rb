@@ -6,6 +6,7 @@ class ExamplesList < MG::Scene
     add_option "Walking Sprite", WalkingSpriteExample
     add_option "Basic Collision Detection", BasicCollisionExample
     add_option "Advanced Collision Detection", AdvancedCollisionExample
+    add_option "Tile Map Example", TileMapExample
   end
 
   def add_option(label_text, scene_class)

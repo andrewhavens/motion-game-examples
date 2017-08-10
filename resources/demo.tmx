@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.2" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" source="demo.tsx"/>
+ <layer name="grass" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF1AKJjKRhmB5qmYdsLq3NI9csepk32MNvKIThUIgTYgG6GdQwcxQwMAAAmPI9QQ==
+  </data>
+ </layer>
+ <layer name="path" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF9ASJQJwExMmj5o2aN2oezc2DAWqbNwogAABpTw0G
+  </data>
+ </layer>
+</map>
